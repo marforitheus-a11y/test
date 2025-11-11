@@ -9,9 +9,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Rotas principais
 app.use("/api/quizzes", quizRoutes);
 app.use("/api/pdfs", pdfRoutes);
 app.use("/api/ai", aiRoutes);
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, ()=> console.log(`Backend rodando na porta ${PORT}`));
+// Exporta o app para a Vercel
+export default app;
+
+// (Opcional: servidor local para desenvolvimento)
+if (process.env.NODE_ENV !== "production") {
+  const PORT = process.env.PORT || 3001;
+  app.listen(PORT, () => console.log(`🚀 Backend rodando localmente na porta ${PORT}`));
+}
