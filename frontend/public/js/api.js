@@ -10,7 +10,7 @@ const BASE_PATH_PDF = "/pdf";
 /**
  * Lista os temas (JSONs) lendo o arquivo index.json
  */
-export async function apiListSubjects() {
+async apiListSubjects() {
   const res = await fetch(`${BASE_PATH_JSON}/index.json`);
   if (!res.ok) throw new Error("Erro ao carregar index.json");
   return res.json();
@@ -20,7 +20,7 @@ export async function apiListSubjects() {
  * Lê um arquivo JSON de questões específico
  * (por exemplo, Lei_12815.json)
  */
-export async function apiGetQuiz(filename) {
+async apiGetQuiz(filename) {
   const res = await fetch(`${BASE_PATH_JSON}/${filename}`);
   if (!res.ok) throw new Error(`Erro ao carregar o quiz ${filename}`);
   return res.json();
@@ -31,7 +31,7 @@ export async function apiGetQuiz(filename) {
  * (requer um arquivo de índice opcional pdf-index.json,
  * ou busca dinâmica a partir do servidor estático)
  */
-export async function apiListPDFs() {
+async apiListPDFs() {
   // forma 1: se você tiver um arquivo pdf-index.json
   const res = await fetch(`${BASE_PATH_PDF}/pdf-index.json`);
   if (res.ok) {
@@ -47,7 +47,7 @@ export async function apiListPDFs() {
  * Envia prompt para o backend gerar questões com Gemini AI
  * e retorna o resultado no formato JSON de questões
  */
-export async function apiGenerateQuestions(promptData) {
+async apiGenerateQuestions(promptData) {
   try {
     const res = await fetch("/api/ai/generate", {
       method: "POST",
