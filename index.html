@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Quiz de Questões — Gerador</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Marfori Corporations</h1>
+    <p class="subtitle">Simulado OGMO - CAPATAZIA</p>
+    <nav class="tabs">
+      <button data-tab="quiz" class="active">Quiz</button>
+      <button data-tab="generator">Gerar Questões</button>
+      <button data-tab="manage">Gerenciar PDFs</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="quiz" class="tab-content">
+      <div id="appRoot"></div>
+    </section>
+
+    <section id="generator" class="tab-content" style="display:none;">
+      <div class="generator-panel">
+        <h2>🧠 Gerador de Questões (Gemini)</h2>
+        <label>Tema / Nome do JSON</label>
+        <input id="themeName" placeholder="Ex: Lei 12815 - páginas 19 a 22">
+        <label>Quantidade de questões</label>
+        <input id="questionCountAI" type="number" min="1" value="10">
+        <label>Prompt adicional (opcional)</label>
+        <textarea id="prompt" placeholder='Ex: "Priorize artigos X e Y, ênfase em penalidades."'></textarea>
+        <label>Escolha PDFs existentes</label>
+        <select id="pdfSelect" multiple size="4"></select>
+        <label>Filtrar páginas</label>
+        <input id="pdfPages" placeholder="Ex: 1-5 ou 10,12">
+        <label>Ou envie novo PDF</label>
+        <input type="file" id="pdfUpload" accept=".pdf">
+        <div class="row">
+          <button id="generateBtn">Gerar Questões</button>
+          <button id="clearGen" class="ghost">Limpar</button>
+        </div>
+        <pre id="generationResult" class="resultBox">Resultados aparecerão aqui</pre>
+      </div>
+    </section>
+
+    <section id="manage" class="tab-content" style="display:none;">
+      <div class="generator-panel">
+        <h2>📁 Gerenciar PDFs</h2>
+        <input type="file" id="pdfUploadManage" accept=".pdf">
+        <button id="uploadManageBtn">Enviar PDF</button>
+        <ul id="manageList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Front-end modular — integre com backend /api para funcionalidade completa.</small>
+  </footer>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
