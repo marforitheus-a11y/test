@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 // Caminho compatível com o ambiente serverless da Vercel
-const pdfDir = path.resolve("frontend/public/pdf");
+const pdfDir  = path.resolve("./frontend/public/pdf");
 
 /**
  * Lista todos os arquivos PDF disponíveis para estudo.
