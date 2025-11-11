@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 // Caminho seguro e compatível com Vercel (usa path.resolve)
-const jsonDir = path.resolve("frontend/public/json");
+const jsonDir = path.resolve("./frontend/public/json");
 
 /**
  * Lista todos os temas (arquivos JSON) definidos no index.json.
