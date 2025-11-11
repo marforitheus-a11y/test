@@ -1,0 +1,22 @@
+[
+  {
+    "id": "700036",
+    "disciplina": "Legislação Federal",
+    "assunto": "Lei nº 12.815/2013 - Das Infrações e Penalidades",
+    "banca": "IDCAP (Simulado)",
+    "instituicao": "Simulado Concurso Portuário",
+    "ano": "2025",
+    "cargo": "Analista Portuário (Simulado)",
+    "nivel": "Superior",
+    "enunciado": "Conforme o Art. 47 da Lei 12.815/2013 ...",
+    "alternativas": {
+      "A": "Advertência.",
+      "B": "Multa.",
+      "C": "Prisão simples do responsável pela carga.",
+      "D": "Proibição de ingresso na área do porto.",
+      "E": "Cancelamento do credenciamento."
+    },
+    "resposta_correta": "C",
+    "comentario": "A alternativa C está correta porque..."
+  }
+]
