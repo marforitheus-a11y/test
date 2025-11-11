@@ -1,5 +1,5 @@
-import { apiListPDFs, apiUploadPDF, apiGenerateQuestions } from "./api.js";
-
+import { apiListPDFs, apiUploadPDF} from "./api.js";
+api.generateQuestions(promptData);
 export function initGeneratorUI(){
   loadPDFSelect();
 
